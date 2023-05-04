@@ -5,3 +5,4 @@ INSERT INTO users VALUES ('1','admin','admin','admin',MD5('password'),'admin.jpg
 CREATE TABLE guestbook (comment_id serial PRIMARY KEY, comment VARCHAR(300), name VARCHAR(100));
 
 INSERT INTO guestbook (comment, name) VALUES ('This is a test comment.','test');
+#Comment
