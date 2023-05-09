@@ -3,11 +3,10 @@ version: 2.1
 jobs:
   sonarscan_build:
     docker:
-      - image: circleci/php:7-zts-buster-node-browsers-legacy
+      - image: cimg/php:8.2.5
      
     steps:
       - checkout
-      #- run: sudo docker-php-ext-install zip
       - sonarcloud/scan
 
 orbs:
