@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  sonarscan_build:
+    docker:
+      - image: cimg/php:8.2.5
+     
+    steps:
+      - checkout
+      - sonarcloud/scan
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.3
+
+workflows:
+  sonarcloud_circleci_scan:
+    jobs:
+      - sonarscan_build:
+          context: SonarCloud
