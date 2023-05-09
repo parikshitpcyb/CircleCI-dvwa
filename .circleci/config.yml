@@ -26,5 +26,5 @@ orbs:
 workflows:
   sonarcloud_circleci_scan:
     jobs:
-      - build:
+      - sonarscan_build:
           context: SonarCloud
