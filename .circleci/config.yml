@@ -16,4 +16,5 @@ workflows:
   sonarcloud_circleci_scan:
     jobs:
       - sonarscan_build:
-          context: SonarCloud
+          context: SonarCloud 
+          #Circle Ci Context where environment variables for SONAR_TOKEN is defined.
